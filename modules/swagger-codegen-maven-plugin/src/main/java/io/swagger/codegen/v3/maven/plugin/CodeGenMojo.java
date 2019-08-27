@@ -181,6 +181,12 @@ public class CodeGenMojo extends AbstractMojo {
     private String ignoreFileOverride;
 
     /**
+     * Sets an optional User-Agent http header
+     */
+    @Parameter(name = "httpUserAgent", required = false)
+    private String httpUserAgent;
+
+    /**
      * A map of language-specific parameters as passed with the -c option to the command line
      */
     @Parameter(name = "configOptions")
@@ -399,6 +405,10 @@ public class CodeGenMojo extends AbstractMojo {
 
         if (isNotEmpty(modelNameSuffix)) {
             configurator.setModelNameSuffix(modelNameSuffix);
+        }
+
+        if (isNotEmpty(httpUserAgent)) {
+            configurator.setHttpUserAgent(httpUserAgent);
         }
 
         if (null != templateDirectory) {

@@ -45,6 +45,7 @@ mvn clean compile
 - `modelPackage` - the package to use for generated model objects/classes
 - `apiPackage` - the package to use for generated api objects/classes
 - `invokerPackage` - the package to use for the generated invoker objects
+- `httpUserAgent` - sets User-Agent http header
 - `modelNamePrefix` and `modelNameSuffix` - Sets the pre- or suffix for model classes and enums
 - `withXml` - enable XML annotations inside the generated models and API (only works with Java `language` and libraries that provide support for JSON and XML)
 - `configOptions` - a map of language-specific parameters (see below)
